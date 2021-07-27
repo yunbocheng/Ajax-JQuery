@@ -23,7 +23,7 @@
 
 ## 二、Ajax思维导图
 
-![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105311.png)
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105417.png)
 
 ## 三、清单
 
