@@ -1,7 +1,7 @@
 # Ajax && JSON && JQuery 详解 
 
 <center>
-<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105332.png" >
+<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727110124.png" >
 </center>
 
 
@@ -19,11 +19,11 @@
 
 ## 一、Ajax工作原理
 
-![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105311.png)
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727110154.png)
 
 ## 二、Ajax思维导图
 
-![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105417.png)
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727110223.png)
 
 ## 三、清单
 
