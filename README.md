@@ -1,7 +1,7 @@
 # Servlet
 
 <center>
-<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/ajax%E4%B8%8Ejqurey.jpg" >
+<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105332.png" >
 </center>
 
 
@@ -19,11 +19,11 @@
 
 ## 一、Ajax工作原理
 
-![](https://gitee.com/YunboCheng/imageBad/raw/master/image/ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png)
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105311.png)
 
 ## 二、Ajax思维导图
 
-![](https://gitee.com/YunboCheng/imageBad/raw/master/image/ajax.png)
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105311.png)
 
 ## 三、清单
 
