@@ -1,4 +1,4 @@
-# Servlet
+# Ajax && JSON && JQuery 详解 
 
 <center>
 <img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210727105332.png" >
