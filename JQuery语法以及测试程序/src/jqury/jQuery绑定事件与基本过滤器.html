@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery绑定事件与过滤器的使用</title>
+		<style type="text/css">
+			div{
+				background: chocolate;
+			}
+			font{
+				font-size: 10px;
+				color: red;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+		/* 
+			使用jQuery绑定事件的意义：
+				在于设置一个按钮，就可以操作想要操作的全部dom对象。
+				这样可以极大的简化开发人员的开发时间
+		 */
+			/* $(document).ready(函数) ：当前页面中的dom对象加载成功后，会执行ready()*/
+			// 相当于 onload()
+			// $(function()) 这个就相当于js中的那个入口
+			$(function(){
+				// 当页面中的dom对象加载完毕后，给对象绑定事件，因为此时butten对象已经存在
+				/* 绑定按钮，jQuery中给dom对象绑定事件。可以一次绑定多个div元素 */
+				$("#btn1").click(function(){
+					/* 使用过滤器进行过滤，获取jQuery数组中的第一个dom对象 */					
+					/* 注意：此时的obj是一个jQuery对象 ，且这个对象此时是 div1*/
+					var obj = $("div:first");
+					/* 使用jQuery库中 改变元素css样式的函数 */
+					obj.css("background","red");
+				})	
+				
+				$("#btn2").click(function(){
+					/* 使用过滤器进行过滤 ，获取jQuery数组中最后一个dom对象，且这个对象是div5*/
+					/* 注意：此时的obj是一个jQuery对象 */
+					var obj = $("div:last");
+					/* 使用jQuery库中 改变元素css样式的函数 */
+					obj.css("background","pink")
+				})
+				$("#btn3").click(function(){
+					/* 使用过滤器进行过滤 ，获取jQuery数组中下标等于3的dom对象，且这个对象是div4*/
+					/* 注意：此时的obj是一个jQuery对象 */
+					var obj = $("div:eq(3)");
+					/* 使用jQuery库中 改变元素css样式的函数 */
+					obj.css("background","orange");
+				})
+				$("#btn4").click(function(){
+					/* 使用过滤器进行过滤，获取jQuery数组中下标小于3的dom对象*/
+					/* 此时的dom对象是 div1,div2,div3  */
+					/* 注意：此时的obj是一个jQuery对象 */
+					var obj = $("div:lt(3)");
+					/* 使用jQuery库中 改变元素css样式的函数 */
+					obj.css("background","yellow");
+				})
+				$("#btn5").click(function(){
+					/* 使用过滤器进行过滤，获取jQuery数组中下标大于2的dom对象 */
+					/* 此时的dom对象， div4,di5 */
+					var obj = $("div:gt(2)");
+					/* 使用jQuery库中 改变元素css样式的函数 */
+					obj.css("background","black");
+				})
+				$("#btn6").click(function(){
+					/* 这次不进行过滤，直接操作所有的div */
+					var obj = $("div");
+					/* 使用jQuery库中 改变css样式的函数 */
+					obj.css("background","blue");
+					/* 获取span对象 */
+					var objfont = $("font");
+					/* 使用jQuery库中的函数改变css样式 */
+					objfont.css("color","black");
+					objfont.css("font-size","40px");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div>我是div1</div>
+		<div>我是div2</div>
+		<div>我是div3
+			<div>我是div4</div>
+		</div>
+		<div>我是div5</div>
+		<font>我是一个font</font>
+		<br>
+		<input type="button" id="btn1" value="我是一个btn1按钮" />
+		<br>
+		<input type="button" id="btn2" value="我是一个btn2按钮" />
+		<br>
+		<input type="button" id="btn3" value="我是一个btn3按钮" />
+		<br>
+		<input type="button" id="btn4" value="我是一个btn4按钮" />
+		<br>
+		<input type="button" id="btn5" value="我是一个btn5按钮" />
+		<br>
+		<input type="button" id="btn6" value="我是一个btn6按钮" />
+		<br>
+	</body>
+</html>

@@ -7,7 +7,7 @@ import com.yunbocheng.entity.Province;
 /**
  * 以下代码是展示一下 jackson的用法，与本项目无关
  */
-public class TestJson {
+public class TestJson_与这个项目无关 {
     public static void main(String[] args) throws JsonProcessingException {
         // 使用jackson 把Java对象转换为json格式的字符串
         Province province  = new Province();

@@ -14,10 +14,10 @@
         <url-pattern>/one</url-pattern>
     </servlet-mapping>
 
-    <!--声明QueryJsonServlet-->
+    <!--声明JsonServlet-->
     <servlet>
         <servlet-name>TwoSrevlet</servlet-name>
-        <servlet-class>com.yunbocheng.controller.JsonQueryJsonServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.JsonServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

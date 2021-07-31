@@ -27,23 +27,35 @@
 
 ## 三、清单
 
-### 1.Ajax && JSON
+### 1.Ajax
 
 -	[项目一:全局刷新计算bmi](./全局刷新计算bmi)
 -	[项目二:Ajax计算bim创建异步对象](./Ajax计算bim创建异步对象)
 -	[项目三:根据ID查询省份(Ajax异步对象实现)](./Ajax-根据ID查询省份)
 -	[Ajax概念](./Ajax概念.md)
+
+
+### 2.JSON
+
 -	[JSON概念](./JSON概念.md)
 
+### 3. jQuery 
 
-### 2.JQuery
 
--	[1-JSP文件使用展示](./JSP文件使用展示)
--	[2-JSP文件Java命令书写规则](./JSP文件Java命令书写规则)
--	[3-JSP文件内置Java对象](./JSP文件内置Java对象)
--	[4-JSP调用原理分析](./JSP调用原理分析)
--	[5-JSP概念](./Ajax概念.md)
+-	[第一个jQuery网页](./JQuery语法以及测试程序/src/jqury/第一个jQuery网页.html)
+-	[DOM对象转化为jQuery对象](./JQuery语法以及测试程序/src/jqury/DOM对象转化为jQuery对象.html)
+-	[jQuery对象转换为DOM对象](./JQuery语法以及测试程序/src/jqury/jQuery对象转换为DOM对象.html)
+-	[jQuery绑定事件与基本过滤器](./JQuery语法以及测试程序/src/jqury/jQuery绑定事件与基本过滤器.html)
+-	[on 事件绑定](./JQuery语法以及测试程序/src/jqury/on事件绑定.html)
+-	[表单对象属性过滤器](./JQuery语法以及测试程序/src/jqury/表单对象属性过滤器.html)
+-	[表单选择器与jQuery函数](./JQuery语法以及测试程序/src/jqury/表单选择器与jQuery函数.html)
+-	[jQuery库函数hide函数等](./JQuery语法以及测试程序/src/jqury/jQuery库函数hide函数等.html)
+-	[JQuery概念](./JQuery概念.md)
+-	[jQuery官方文档](./JQuery语法以及测试程序/src/jqury/jquery-3.6.0.js)
 
+### 4.省市级联查询项目
+
+-	[省市级联查询](./Jquery和Ajax实现省市级联查询)
 
 ## 四、参考文献
 

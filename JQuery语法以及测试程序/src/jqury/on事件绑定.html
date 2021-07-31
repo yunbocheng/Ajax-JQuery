@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>on事件绑定</title>
+		<!-- 导入jQuery库 -->
+		<script src="jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* 首先确保页面中的所有元素加载完毕 */
+			$(function(){
+				/* 通过id选择器定位dom对象(btn)，获取该对象的jQuery对象 */
+				$("#btn").click(function(){
+					/* 通过id选择器定位dom对象(mydiv)，是用 jQuery库中的 append()函数增加增加dom对象 */
+					$("#mydiv").append("<input id='newbtn' type='butten' value='我是一个新增的按钮'></input>");
+					$("#newbtn").on("click",function(){
+						alert("绑定成功！！");
+					})
+				})
+				
+				/* 以下是简单测试on事件代码 */
+				/* 通过id选择器定位dom对象(btn1)获取jQuery对象 */
+				$("#btn1").on("click",function(){
+					/* 通过id选择器定位dom对象(div)，获取jQuery对象 */
+					/* 获取div对象的value值，此时是一个jQuery对象，使用val()函数 */
+					alert($("#text1").val());
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<!--设置一个div，作为增加新按钮的前提-->
+		<div id="mydiv">我需要一个新的按钮</div>
+		<!-- 添加一个按钮，绑定单击事件，获取div对象 -->
+		<button value="1" id="btn">我是一个操作mydiv对象的按钮</button>
+		<br/>
+		<!-- 设置一个div，简单的测试一下 on 事件 -->
+		<input id="text1" type="text" value="测试on事件成功">
+		<br/>
+		<input type="button" id="btn1" value="我是一个测试按钮" />
+	</body>
+</html>

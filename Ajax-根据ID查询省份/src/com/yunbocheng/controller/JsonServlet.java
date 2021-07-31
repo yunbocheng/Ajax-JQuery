@@ -11,17 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class JsonQueryJsonServlet extends HttpServlet {
+public class JsonServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String json = "";
         // 默认值，表示json格式的数据 {}
         // 获取请求参数，省份的id
             String strProid= req.getParameter("proid");
-            // 判断strProid1即用户输入的数据是否为空
-            json = discover(strProid);
-            // 判断strProid1即用户输入的数据是否存在于数据库
-            json = check(Integer.valueOf(strProid));
         // 判断proid有值时，调用dao查询数据，并求数据不为空的
         if (strProid != null && strProid.trim().length() > 0) {
             // 调用判断该数据据在数据库中
@@ -45,31 +41,6 @@ public class JsonQueryJsonServlet extends HttpServlet {
         out.flush();
         // 释放通道
         out.close();
-    }
-
-    // 定义一个方法，判断用户输入的数据是否存在于数据库中
-
-    public String check(Integer number){
-        String resultStr = "";
-        if(number>0&&number<10){
-            String value = String.valueOf(number);
-            resultStr =value;
-        }else {
-            resultStr = "对不起，找不到您要查询的信息";
-        }
-        return  resultStr;
-    }
-
-    // 定义一个方法，判断用户输入的字符串为不为空
-    public String discover(String str){
-        // 通过获取字符串长度判断是不是空字符串
-        String resultStr = "";
-        if(str.length() == 0){
-            resultStr = "请输入你要查询的id！！";
-        }else {
-            resultStr = str;
-        }
-        return resultStr;
     }
 }
 

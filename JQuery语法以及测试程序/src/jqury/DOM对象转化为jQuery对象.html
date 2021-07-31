@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM对象转化为jQuery对象</title>
+		<script type="text/javascript" src="jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			/* 输出dom对象 */
+			function dochange(){
+				/* 获取dom对象 ,此此时dombtn就是一个dom对象*/
+				var dombtn = document.getElementById("btn");
+				alert("我此时是一个dom对象 : " + dombtn.value);
+				/* 将dombtn对象转换为jQuery对象 */
+				/* 在表示符的前边加一个 $ 的作用就是用来区分此时是一个dom对象还是一个jQuery对象，用来区分，可加可不加 */
+				var $jquery = $(dombtn);
+				// 调用 jQuery库中的函数，val()获取value值
+				alert("我此时是一个jQuery对象 :" + $jquery.val());
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" id="btn" value="btn按钮" onclick="dochange()" />
+		</div>
+	</body>
+</html>

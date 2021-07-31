@@ -3,25 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!--查询所有的省份servlet声明开始-->
     <servlet>
-        <!--声明Servlet-->
         <servlet-name>OneSrevlet</servlet-name>
-        <servlet-class>com.yunbocheng.controller.OneAjax</servlet-class>
+        <servlet-class>com.yunbocheng.controller.QueryProvinceServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>OneSrevlet</servlet-name>
         <url-pattern>/one</url-pattern>
     </servlet-mapping>
+    <!--查询所有的省份servlet声明结束-->
 
-    <!--声明JsonServlet-->
+    <!--注册查询city的servlet开始！-->
     <servlet>
         <servlet-name>TwoSrevlet</servlet-name>
-        <servlet-class>com.yunbocheng.controller.JsonServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.QueryCityServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>TwoSrevlet</servlet-name>
         <url-pattern>/two</url-pattern>
     </servlet-mapping>
+    <!--注册查询city的servlet结束！-->
 </web-app>

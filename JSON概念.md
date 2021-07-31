@@ -56,4 +56,9 @@
 		
 		5.处理json的工具库：jackson
 
+		6. json对象中的这个 key 双引号可加可不加，但是后边的这个属性值 要根据定义的类型添加或者不添加双引号
+			varcher：添加双引号 
+		   {id:1,name:"河北",jiancheng:"冀",shenghui:"石家庄"}
+		   {"id":1,"name":"河北","jiancheng":"冀","shenghui":"石家庄市"}
+		7. 使用 jackson(将字符串转化为json格式的字符串的一个工具类 	)
 在JS中，可以把json格式的字符串转化为json对象，json中的key，就是json对象的属性名。

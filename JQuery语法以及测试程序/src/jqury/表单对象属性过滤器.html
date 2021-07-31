@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单对象属性过滤器</title>
+		<style type="text/css">
+			div {
+				background-color: aqua;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.6.0.js" ></script>
+		<script type="text/javascript">
+			/* $(document).ready(函数) ：当前页面中的dom对象加载成功后，会执行ready()*/
+			// 相当于 onload()
+			// $(function()) 这个就相当于js中的那个入口
+			$(function(){
+				/* 以下代码是过滤所有的文本框获取可编辑的文本框并进行赋统一的值*/
+				$("#btn1").click(function(){
+					// 过滤所有的text，选中可编辑的文本框
+					/* :text 使用的是表单选择器定位dom对象，:enabled(可编辑文本框)是此时这个dom对象的状态值 */
+					var $obj = $(":text:enabled");
+					// 设置 jQuery数组中所有dom对象的value值
+					/* 这段代码的作用是测试一下过滤之后还剩哪些text框 */
+					for(var i=0; i<$obj.length;i++){
+						alert($($obj[i]).val());
+					}
+					$obj.val("hello");
+				})
+				
+				/* 以下代码是过滤所有复选框的值获取被选中的复选框的值 */
+				$("#btn2").click(function(){
+					// 过滤所有的checkbox，获取被选中的复选框的值
+					/* :checkbox 使用的是表单选择器定位donm对象， :checked(被选中)代表此时这个dom对象的状态值 */
+					var $obj = $(":checkbox:checked");
+					// 获取这个 $obj jQuery对象数组中的 value值
+					 for(var i = 0;i < $obj.length;i++){
+						 /* 获取jQuery数组中的dom对象,此时idedomobj是一个dom对象*/
+						 /* 方法一 ：使用dom对象的方法获取value值*/
+						// var domobj = $obj[i];
+						// alert(domobj.value);
+						/* 方法二：使用 jQuery对象获取value值 */
+						alert( $($obj[i]).val() );  
+					 }
+				})
+				
+				/* 以下代码是获取下拉菜单中被选中的value值，而你是使用selected定义的默认值*/
+				/* 这个option的数值可以在 下拉菜单中改变，此时过滤后的option值会发生改变。 */
+				$("#btn3").click(function(){
+					/* 过滤所有的 option，获取被选中的 option*/
+					/* 
+						使用id选择器进行定位dom对象，此时只有一个selext，
+						也可以使用 select标签选择器进行选择。
+					 */
+					// var $obj = $("select>option:selected");
+					var $obj = $("#select1>option:selected");
+					alert($obj.val());
+				})
+				
+				/* 一下代码是测试val()函数获取的是jQuery数组中的第一个value值 */
+				$("#btn4").click(function(){
+					/* 
+					获取所有txet的value值，此时获取的是一个jQuery对象
+					将他们放在一个value数组中，此时使用jQuery库中的val()函数
+					获取的是数组中的第一个value值。
+					*/
+				   /* 通过 class样式选择器获取jQuery对象，获取的是所有class一样的dom对象 */
+				   var $obj = $(".text1");
+				   alert($obj.val());  // 学生
+				})
+				
+				/* 以下代码是测试 jQuery 库中value("参数") 函数*/
+				$("#btn5").click(function(){
+					/* 获取jQuery对象，改变获取到的所有jQuery对象的value值 */
+					/* 通过 class样式选择器获取jQuery对象，获取的是所有class一样的dom对象 */
+					var $obj = $(".text1");
+					$obj.val("主任");
+				})
+				
+				/* 以下代码是测试jQuery库中的text()函数，将显示的文本拼接为一个字符串 */
+				$("#btn6").click(function(){
+					/* 获取jQuery对象，使用jQuery库中的text()函数拼接显示的文本，拼接为一个字符串 */
+					/* 通过标签选择器获取jQuery对象 ，获取到的是所有div标签的dom对象*/
+					var $obj = $("div");
+					/* 调用 jQuery库中的 text()函数，将div显示的文本内容进行拼接为一个字符串 */
+					alert($obj.text());  // 我是Java学生
+				})
+				
+				/* 以下代码测试jQuery库中的 text(参数) 函数 */
+				$("#btn7").click(function(){
+					/* 获取jQuery对象，使用jQuery库中的 text(参数)函数 改变所有div的显示内容*/
+					/* 通过标签选择器获取jQuery对象 ，获取到的是所有div标签的dom对象*/
+					var $obj = $("div");
+					/* 调用jQuery库中的 text(参数)函数 改变所有div的显示内容 */
+					$obj.text("测试成功！！");   
+				})
+				
+				/* 以下代码是测试jQuery库中的 attr("属性名")函数*/
+				$("#btn8").click(function(){
+					/* 获取jQuery对象，使用jQuery库中的 attr("属性名") 函数 获取其他属性值 */
+					/* 通过标签选择器获取jQuery对象，获取到的是所有a标签的dom对象 */
+					var $obj = $("a");
+					/* 获取该属性名对应的value值 */
+					alert($obj.attr("href"));   // http://www.baidu.com
+				})
+				
+				/* 以下代码是测试jQuery库中的 attr("属性名","值")函数 */
+				$("#btn9").click(function(){
+					/* 通过标签选择器获取jQuery对象，获取到的是所有a标签的dom对象 */
+					var $obj = $("a");
+					/* 对数组中所有 DOM 对象的属性设为新值。 */
+					$obj.attr("href","http://www.jd.com");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<p>文本框</p>
+		<!-- disable代表只读文本 -->
+		<!-- 以下三个只读文本的效果是一样的，不论disabled是否有值-->
+		<input type="text" id="text1" value="text1" /><br>
+		<input type="text" id="text2" value="text2"  disabled="true" /><br>
+		<input type="text" id="text3" value="text3" disabled/><br>
+		<input type="text" id="text4" value="text4" disabled="false" /><br>
+		<input type="text" id="text5" value="text5" /><br>
+		
+		<p>复选框</p>
+		<!-- checked表示是被选中的 -->
+		<!-- 下边的三个选项都会被选中，不论checked有无值，都会被选中，他们的效果是一样的 -->
+		<input type="checkbox" value="游泳" checked="true"/>游泳<br/>
+		<input type="checkbox" value="健身" checked="false" />健身<br/>
+		<input type="checkbox" value="游戏" checked />游戏<br/>
+		
+		<p>下拉框</p>
+		<!-- 
+			注意：在下拉列表中，只会选一个option值，如果同时给两个option设置为selected
+				  这个时候，第二个 option 会覆盖第一个 option ,而不是并列同时存在。
+				  默认值只能存在一个。
+		 -->
+		<select id="select1">
+			<option value="抽烟" selected="true">抽烟</option>
+			<option value ="喝酒">喝酒</option>
+			<option value ="烫头" >烫头</option>
+		</select>
+		
+		<p>测试val函数</p>
+		<input type="text" class="text1" value="学生" /><br>
+		<input type="text" class="text1" value="校长" /><br>
+		
+		<p>测试text函数 获取所有的div的文本显示内容将其拼接为一个字符串</p>
+		<div>我</div>
+		<div>是</div>
+		<div>Java</div>
+		<div>学</div>
+		<div>生</div>
+		
+		
+		<p>获取a标签中href的属性值</p>
+		<a href="http://www.baidu.com">百度一下</a>
+		
+		<p>功能按钮</p>
+		<button id="btn1">所有可用的text设置helllo</button><br/>
+		<button id="btn2">所有被选中的复选框的值</button><br/>
+		<button id="btn3">显示下拉列表选中的值</button><br/>
+		<button id="btn4">测试jQuery库中的val()函数</button><br/>
+		<button id="btn5">测试jQuery库中的val(参数)函数</button><br/>
+		<button id="btn6">测试jQuery库中的text()函数</button><br/>
+		<button id="btn7">测试jQuery库中的text(参数)函数</button><br/>
+		<button id="btn8">测试jQuery库中的attr("属性名")函数</button><br/>
+		<button id="btn9">测试jQuery库中的attr("属性名","值")函数</button><br/>
+	</body>
+</html>

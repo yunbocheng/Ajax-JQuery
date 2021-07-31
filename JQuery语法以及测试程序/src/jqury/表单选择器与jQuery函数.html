@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单选择器</title>
+		<!-- 获取jQuery库 -->
+		<script type="text/javascript" src="jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			function fun1(){
+				/* 通过表单选择器获取text的jQuery对象 */
+				var $objText = $(":text");
+				// val()是jQuery中的函数，用于获取属性的value值
+				// 所有获取的jQuery对象都是一个数组
+				// 因为此时只存在一个 text 属性，所以 jQuery对象数组中只有一个数值
+				// 此时直接获取即可，如果存在多个数值，此时需要使用循环遍历jQuery对象数组来获取数据。
+				alert($objText.val());
+			}		
+			function fun2(){
+				/* 通过表单选择器获取checkbox的jQuery对象 */
+				var $objCheckbox = $(":checkbox");
+				/* 此时获取到的 jQuery对象数组中存在一个或者多个数值，此时需要循环遍历数组 */
+				for(var i = 0; i< $objCheckbox.length; i++){
+					/* 
+						获取数据，重点：如果要进行循环遍历，此时一定需要使用下标值 
+						如果使用了下标值，就会发生以下代码操作 $objCheckbox[0] 
+						此时就会发生 jQuery对象 到 dom对象的转变。此时需要使用
+						dom对象的 document.value 方法取数属性对应的 value值
+					*/
+				   var domCheckbox = $objCheckbox[i];
+				   alert(domCheckbox.value);	
+				}
+			}
+			function fun3(){
+				/* 通过 表单选择器获取radio的jQuery对象 */
+				/* 此时jQuery对象是一个数组 man woman */
+				var $objRadio = $(":radio");
+				/* 循环遍历数组 */
+				for(var i =0 ;i<$objRadio.length;i++){
+					// 从数组中获取成员，使用下标的方式
+					var dom = $objRadio[i];
+					// 使用dom对象的属性，获取value值 
+					// alert(dom.value);					
+					/* 重点：此时想使用 jQuery 对象来获取属性值的value */
+					// 1. 首先获取 jQuery 对象
+					var $jquery = $(dom);
+					// 2 .使用jQuery对象中的函数读取属性值的value值
+					alert($jquery.val());
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="我是一个type = text"/><br/>
+		<input type="checkbox" value="抽烟"/>抽烟<br/>
+		<input type="checkbox" value="喝酒"/>喝酒<br/>
+		<input type="checkbox" value="烫头"/>烫头<br/>
+		
+		<input type="radio" name="sex" value="man"/>男<br/>
+		<input type="radio" name="sex" value="woman"/>女<br/>
+		
+		<input type="button" value="读取text的值" onclick="fun1()"/><br/>
+		<input type="button" value="读取checkbox的值" onclick="fun2()"/><br/>
+		<input type="button" value="读取radio的值" onclick="fun3()"/><br/>
+	</body>
+</html>

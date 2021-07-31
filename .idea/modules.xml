@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Ajax+JQuery项目.iml" filepath="$PROJECT_DIR$/Ajax+JQuery项目.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ajax-根据ID查询省份/Ajax-根据ID查询省份.iml" filepath="$PROJECT_DIR$/Ajax-根据ID查询省份/Ajax-根据ID查询省份.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ajax计算bim创建异步对象/Ajax计算bim创建异步对象.iml" filepath="$PROJECT_DIR$/Ajax计算bim创建异步对象/Ajax计算bim创建异步对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JQuery语法以及测试程序/JQuery语法以及测试程序.iml" filepath="$PROJECT_DIR$/JQuery语法以及测试程序/JQuery语法以及测试程序.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jquery和Ajax实现省市级联查询/Jquery和Ajax实现省市级联查询.iml" filepath="$PROJECT_DIR$/Jquery和Ajax实现省市级联查询/Jquery和Ajax实现省市级联查询.iml" />
       <module fileurl="file://$PROJECT_DIR$/全局刷新计算bmi/全局刷新计算bmi.iml" filepath="$PROJECT_DIR$/全局刷新计算bmi/全局刷新计算bmi.iml" />
     </modules>
   </component>
