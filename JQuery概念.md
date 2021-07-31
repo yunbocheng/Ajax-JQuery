@@ -241,6 +241,10 @@ $("div") == [dom1,dom2,dom3]
   >
   > var $obj = $("#select1>option:selected");
 
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210731141358.png)
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210731141538.png)
+
 ## 12.jQuery中绑定事件
 
 ### 12.1 定义元素监听事件
