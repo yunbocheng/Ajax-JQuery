@@ -32,6 +32,7 @@
 -	[项目一:全局刷新计算bmi](./全局刷新计算bmi)
 -	[项目二:Ajax计算bim创建异步对象](./Ajax计算bim创建异步对象)
 -	[项目三:根据ID查询省份(Ajax异步对象实现)](./Ajax-根据ID查询省份)
+-	[Ajax思维导图](./ajax思维导图.pdf)
 -	[Ajax概念](./Ajax概念.md)
 
 
@@ -51,6 +52,7 @@
 -	[表单选择器与jQuery函数](./JQuery语法以及测试程序/src/jqury/表单选择器与jQuery函数.html)
 -	[jQuery库函数hide函数等](./JQuery语法以及测试程序/src/jqury/jQuery库函数hide函数等.html)
 -	[JQuery概念](./JQuery概念.md)
+-	[jQuery思维导图](./jQuery思维导图.pdf)
 -	[jQuery官方文档](./JQuery语法以及测试程序/src/jqury/jquery-3.6.0.js)
 
 ### 4.省市级联查询项目
